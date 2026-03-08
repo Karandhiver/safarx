@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Safar X</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --surface: #f5f5f7;
+            --border-color: #e5e7eb;
+            --text-main: #1d1d1f;
+            --text-muted: #86868b;
+            --black: #000000;
+            --white: #ffffff;
+            --accent: #1e40af;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.5; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; transition: color 0.2s; }
+        
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .section { padding: 8rem 0 5rem; }
+        
+        .flex { display: flex; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .flex-col { flex-direction: column; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-6 { gap: 1.5rem; }
+        .text-center { text-align: center; }
+        .hidden { display: none !important; }
+
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); height: 70px; display: flex; align-items: center; transition: 0.3s; }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .nav-brand { font-size: 1.25rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; color: var(--black); }
+        .nav-links { display: none; gap: 2rem; font-size: 0.875rem; font-weight: 600; color: var(--text-muted); }
+        @media (min-width: 768px) { .nav-links { display: flex; } }
+        .nav-links a:hover { color: var(--black); }
+
+        .btn-primary { background: var(--black); color: var(--white); padding: 0.5rem 1.25rem; border-radius: 99px; font-weight: 700; font-size: 0.875rem; display: inline-flex; align-items: center; justify-content: center; transition: 0.2s; border: 1px solid var(--black); }
+        .btn-primary:hover { background: #333; }
+
+        .page-header { text-align: center; margin-bottom: 4rem; }
+        .page-title { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: var(--black); margin-bottom: 1rem; }
+        .page-subtitle { color: var(--text-muted); font-size: 1.125rem; font-weight: 500; }
+
+        .prose { max-width: 800px; margin: 0 auto; text-align: left; background: var(--white); border: 1px solid var(--border-color); border-radius: 2rem; padding: 2rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        @media (min-width: 640px) { .prose { padding: 4rem; } }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; color: var(--black); margin-top: 2rem; margin-bottom: 1rem; }
+        .prose h2:first-child { margin-top: 0; }
+        .prose p { color: var(--text-muted); margin-bottom: 1rem; line-height: 1.7; font-size: 1rem; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+        
+        .footer-link:hover { color: var(--black); }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-brand">
+                <div style="width:32px; height:32px; background:var(--black); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="map-pin" style="width:16px; height:16px; color:var(--white);"></i>
+                </div>
+                <span>SafarX</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html#overview">Overview</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#pricing">Pricing</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="index.html#beta" class="btn-primary flex">
+                    Join Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Terms of Service</h1>
+                <p class="page-subtitle">Effective as of: March 2026</p>
+            </div>
+            
+            <div class="prose">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing, downloading, or using the Safar X application ("Service"), you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use the Service.</p>
+
+                <h2>2. Description of Service</h2>
+                <p>Safar X provides digital tools for commercial drivers, including but not limited to, revenue tracking (Digital Hisaab), route optimization, demand forecasting (Surge Radar), and digital fleet logging. We do not provide transportation services directly; we provide analytics tools for drivers.</p>
+
+                <h2>3. Beta Phase Acknowledgment</h2>
+                <p>Safar X is currently in a Beta testing phase. You acknowledge that the Service may contain bugs, errors, or inaccuracies. Access to the Beta is provided at zero cost during this phase, but Safar X reserves the right to introduce premium paid tiers in the future for new features.</p>
+
+                <h2>4. User Responsibilities</h2>
+                <p>As a user, you agree to:</p>
+                <ul>
+                    <li>Provide accurate and truthful information during registration.</li>
+                    <li>Not use the app while driving in a manner that violates local traffic laws. Safety is your ultimate responsibility.</li>
+                    <li>Not reverse-engineer, decompile, or attempt to extract the source code of the application.</li>
+                </ul>
+
+                <h2>5. Limitation of Liability</h2>
+                <p>Safar X shall not be liable for any indirect, incidental, or consequential damages resulting from the use or inability to use our services, including but not limited to lost profits, lost data, or route inaccuracies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 4rem 0 2rem; border-top: 1px solid var(--border-color); background: var(--bg-color);">
+        <div class="container flex flex-col items-center justify-center gap-6 text-center">
+            
+            <div class="nav-brand text-black" style="justify-content: center;">
+                <div style="width:32px; height:32px; background:var(--black); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="map-pin" style="width:16px; height:16px; color:var(--white);"></i>
+                </div>
+                <span style="font-size: 1.5rem;">SafarX</span>
+            </div>
+            
+            <div class="flex items-center justify-center gap-6 font-medium text-sm text-muted" style="flex-wrap: wrap;">
+                <a href="privacy.html" class="footer-link" style="color: var(--text-muted); transition: color 0.2s;" onmouseover="this.style.color='var(--black)'" onmouseout="this.style.color='var(--text-muted)'">Privacy</a>
+                <a href="terms.html" class="footer-link" style="color: var(--text-muted); transition: color 0.2s;" onmouseover="this.style.color='var(--black)'" onmouseout="this.style.color='var(--text-muted)'">Terms</a>
+                <a href="contact.html" class="footer-link" style="color: var(--text-muted); transition: color 0.2s;" onmouseover="this.style.color='var(--black)'" onmouseout="this.style.color='var(--text-muted)'">Contact</a>
+            </div>
+            
+            <div class="text-xs text-muted mt-2">
+                &copy; 2026 Safar X Technologies. Built for the professionals.
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

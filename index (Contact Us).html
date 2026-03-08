@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Safar X</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --surface: #f5f5f7;
+            --border-color: #e5e7eb;
+            --text-main: #1d1d1f;
+            --text-muted: #86868b;
+            --black: #000000;
+            --white: #ffffff;
+            --apple-green: #34c759;
+            --apple-green-light: rgba(52, 199, 89, 0.15);
+            --accent: #1e40af;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.5; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; transition: color 0.2s; }
+        button, input, textarea { font-family: inherit; border: none; outline: none; background: none; }
+        
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .section { padding: 8rem 0 5rem; }
+        
+        .flex { display: flex; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .flex-col { flex-direction: column; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-6 { gap: 1.5rem; }
+        .text-center { text-align: center; }
+        .hidden { display: none !important; }
+        .w-full { width: 100%; }
+
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); height: 70px; display: flex; align-items: center; transition: 0.3s; }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .nav-brand { font-size: 1.25rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; color: var(--black); }
+        .nav-links { display: none; gap: 2rem; font-size: 0.875rem; font-weight: 600; color: var(--text-muted); }
+        @media (min-width: 768px) { .nav-links { display: flex; } }
+        .nav-links a:hover { color: var(--black); }
+
+        .btn-primary { background: var(--black); color: var(--white); padding: 1rem 1.75rem; border-radius: 99px; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; justify-content: center; transition: 0.2s; border: 1px solid var(--black); cursor: pointer; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .btn-primary:hover { background: #333; }
+        .btn-primary:active { transform: scale(0.98); }
+
+        .btn-small { padding: 0.5rem 1.25rem; font-size: 0.875rem; }
+
+        .page-header { text-align: center; margin-bottom: 3rem; }
+        .page-title { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: var(--black); margin-bottom: 1rem; }
+        .page-subtitle { color: var(--text-muted); font-size: 1.125rem; font-weight: 500; max-width: 600px; margin: 0 auto; }
+
+        /* Form Styles */
+        .contact-box { background: var(--surface); border: 1px solid var(--border-color); border-radius: 2rem; padding: 2rem; max-width: 600px; margin: 0 auto; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        @media (min-width: 640px) { .contact-box { padding: 3rem; } }
+
+        .form-group { margin-bottom: 1.5rem; text-align: left; }
+        .form-label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; padding-left: 0.25rem; }
+        .form-input { width: 100%; background: var(--white); border: 1px solid var(--border-color); border-radius: 1rem; padding: 1rem 1.25rem; font-size: 1rem; font-weight: 600; color: var(--black); box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: 0.2s; }
+        .form-input:focus { border-color: var(--black); }
+        textarea.form-input { resize: vertical; min-height: 150px; }
+
+        .footer-link:hover { color: var(--black); }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-brand">
+                <div style="width:32px; height:32px; background:var(--black); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="map-pin" style="width:16px; height:16px; color:var(--white);"></i>
+                </div>
+                <span>SafarX</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html#overview">Overview</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#pricing">Pricing</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="index.html#beta" class="btn-primary btn-small flex">
+                    Join Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Contact Us</h1>
+                <p class="page-subtitle">Have a question, feedback, or need support? Send us a message and our team will get back to you shortly.</p>
+            </div>
+            
+            <div class="contact-box">
+                <!-- WEB3FORMS INTEGRATION -->
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="4a5c1f1c-7500-4616-b06a-910ba1a3891a">
+                    <input type="hidden" name="subject" value="New Contact Inquiry - Safar X">
+                    <input type="hidden" name="from_name" value="Safar X Website">
+                    
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" name="name" required class="form-input" placeholder="Your Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" name="email" required class="form-input" placeholder="you@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea name="message" required class="form-input" placeholder="How can we help you?"></textarea>
+                    </div>
+
+                    <button type="submit" id="contact-submit-btn" class="btn-primary w-full">
+                        Send Message
+                    </button>
+                </form>
+
+                <div id="contact-success-message" class="hidden flex-col items-center justify-center text-center" style="padding: 2rem 0;">
+                    <div style="background: var(--apple-green-light); border: 1px solid rgba(52,199,89,0.2); border-radius: 50%; padding: 0.75rem; margin-bottom: 1rem;">
+                        <i data-lucide="check" style="width:32px; height:32px; color: var(--apple-green);"></i>
+                    </div>
+                    <h4 class="font-bold text-xl text-black" style="margin-bottom: 0.5rem;">Message Sent!</h4>
+                    <p class="text-muted font-medium">Thank you for reaching out. We will get back to you shortly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 4rem 0 2rem; border-top: 1px solid var(--border-color); background: var(--bg-color);">
+        <div class="container flex flex-col items-center justify-center gap-6 text-center">
+            
+            <div class="nav-brand text-black" style="justify-content: center;">
+                <div style="width:32px; height:32px; background:var(--black); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="map-pin" style="width:16px; height:16px; color:var(--white);"></i>
+                </div>
+                <span style="font-size: 1.5rem;">SafarX</span>
+            </div>
+            
+            <div class="flex items-center justify-center gap-6 font-medium text-sm text-muted" style="flex-wrap: wrap;">
+                <a href="privacy.html" class="footer-link" style="color: var(--text-muted); transition: color 0.2s;" onmouseover="this.style.color='var(--black)'" onmouseout="this.style.color='var(--text-muted)'">Privacy</a>
+                <a href="terms.html" class="footer-link" style="color: var(--text-muted); transition: color 0.2s;" onmouseover="this.style.color='var(--black)'" onmouseout="this.style.color='var(--text-muted)'">Terms</a>
+                <a href="contact.html" class="footer-link" style="color: var(--text-muted); transition: color 0.2s;" onmouseover="this.style.color='var(--black)'" onmouseout="this.style.color='var(--text-muted)'">Contact</a>
+            </div>
+            
+            <div class="text-xs text-muted mt-2">
+                &copy; 2026 Safar X Technologies. Built for the professionals.
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Handle Web3Forms Ajax Submission
+        const contactForm = document.getElementById('contact-form');
+        if(contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const btn = document.getElementById('contact-submit-btn');
+                
+                btn.innerHTML = '<i data-lucide="loader-2" style="width:20px; height:20px; animation: spin 1s linear infinite; margin: 0 auto;"></i>';
+                lucide.createIcons();
+                btn.disabled = true;
+
+                try {
+                    const formData = new FormData(contactForm);
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    
+                    if (response.ok) {
+                        contactForm.style.display = 'none';
+                        const successEl = document.getElementById('contact-success-message');
+                        successEl.classList.remove('hidden');
+                        successEl.classList.add('flex');
+                    } else {
+                        btn.innerHTML = 'Error. Try Again.';
+                        btn.disabled = false;
+                    }
+                } catch (error) {
+                    btn.innerHTML = 'Error. Try Again.';
+                    btn.disabled = false;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
