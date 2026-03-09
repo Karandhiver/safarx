@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safar X | The Professional Driver's App</title>
@@ -92,9 +91,6 @@
         .nav-links { display: none; gap: 2rem; font-size: 0.875rem; font-weight: 600; color: var(--text-muted); }
         @media (min-width: 768px) { .nav-links { display: flex; } }
         .nav-links a:hover { color: var(--black); }
-
-        .lang-switch-wrap { display: flex; align-items: center; background: var(--surface); border: 1px solid var(--border-color); border-radius: 99px; padding: 6px 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-        .lang-switch { font-size: 0.75rem; font-weight: 700; color: var(--text-main); cursor: pointer; appearance: none; padding-right: 18px; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right center; background-size: 12px; }
 
         /* --- Buttons --- */
         .btn-primary { background: var(--black); color: var(--white); padding: 0.875rem 1.75rem; border-radius: 99px; font-weight: 700; font-size: 0.875rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; transition: 0.2s; border: 1px solid var(--black); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
@@ -198,10 +194,6 @@
         @media (min-width: 640px) { .countdown-num { font-size: 2.5rem; } }
         .countdown-sep { font-size: 1.5rem; font-weight: 800; color: #d1d1d6; padding-bottom: 1rem; }
         @media (min-width: 640px) { .countdown-sep { font-size: 2.5rem; } }
-
-        /* --- Footer --- */
-        .footer-link { color: var(--text-muted); transition: color 0.2s; font-weight: 500;}
-        .footer-link:hover { color: var(--black); }
     </style>
 </head>
 <body>
@@ -209,34 +201,23 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-inner">
-            <a href="index.html" class="nav-brand">
+            <div class="nav-brand">
                 <div style="width:32px; height:32px; background:var(--black); border-radius:8px; display:flex; align-items:center; justify-content:center;">
                     <i data-lucide="map-pin" style="width:16px; height:16px; color:var(--white);"></i>
                 </div>
                 <span>SafarX</span>
-            </a>
+            </div>
             
             <div class="nav-links">
-                <a href="#overview" data-i18n="nav-overview">Overview</a>
-                <a href="#features" data-i18n="nav-features">Features</a>
-                <a href="#pricing" data-i18n="nav-pricing">Pricing</a>
-                <a href="#beta" data-i18n="nav-beta">Beta Access</a>
+                <a href="#overview">Overview</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#beta">Beta Access</a>
             </div>
 
             <div class="flex items-center gap-3">
-                <!-- 3-Language Dropdown -->
-                <div class="lang-switch-wrap">
-                    <i data-lucide="globe" style="width:14px; height:14px; margin-right:4px;"></i>
-                    <select id="lang-switch" class="lang-switch">
-                        <option value="en">English</option>
-                        <option value="hi">Hindi</option>
-                        <option value="mr">Marathi</option>
-                    </select>
-                </div>
-                
-                <!-- Always visible Join Us button redirecting to beta section -->
-                <a href="#beta" class="btn-primary flex" style="padding: 0.5rem 1.25rem;">
-                    <span data-i18n="nav-join">Join Us</span>
+                <a href="#beta" class="btn-primary hidden md:flex" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
+                    <span>Join Us</span>
                 </a>
             </div>
         </div>
@@ -248,20 +229,20 @@
             
             <div class="hero-badge">
                 <i data-lucide="tag" style="width:14px; height:14px; color:var(--text-muted);"></i>
-                <span data-i18n="hero-badge">100% Free App for Drivers</span>
+                <span>100% Free App for Drivers</span>
             </div>
             
-            <h1 id="live-hero-greeting" class="title-huge" style="margin-bottom: 0.5rem;" data-i18n="hero-greeting">Hello, Mumbai.</h1>
-            <h2 id="live-hero-subtitle" class="subtitle" style="font-size: clamp(1.25rem, 3vw, 1.75rem); max-width: 800px; color: var(--text-muted); margin-bottom: 2.5rem;" data-i18n="hero-subtitle">
+            <h1 class="title-huge" style="margin-bottom: 0.5rem;">Hello, Mumbai.</h1>
+            <h2 class="subtitle" style="font-size: clamp(1.25rem, 3vw, 1.75rem); max-width: 800px; color: var(--text-muted); margin-bottom: 2.5rem;">
                 The ultimate commercial driver app. <br class="hidden md:block"> Launching exclusively in your city.
             </h2>
             
             <div class="hero-buttons">
                 <a href="#beta" class="btn-primary">
-                    <span data-i18n="btn-beta">Get Beta Access</span>
+                    Get Beta Access
                 </a>
                 <a href="#overview" class="btn-outline">
-                    <span data-i18n="btn-learn">Learn more</span> <i data-lucide="chevron-down" style="width:16px; height:16px;"></i>
+                    Learn more <i data-lucide="chevron-down" style="width:16px; height:16px;"></i>
                 </a>
             </div>
         </div>
@@ -279,7 +260,7 @@
                             <div class="app-header">
                                 <div class="flex justify-between items-center" style="margin-bottom: 1.5rem;">
                                     <div>
-                                        <p class="form-label" style="margin:0;" data-i18n="app-today">Today's Overview</p>
+                                        <p class="form-label" style="margin:0;">Today's Overview</p>
                                         <p class="font-bold text-lg text-black">Bandra West</p>
                                     </div>
                                     <div class="app-icon">
@@ -287,7 +268,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <p class="text-sm font-medium text-muted" style="margin-bottom: 0.25rem;" data-i18n="app-earnings">Net Earnings</p>
+                                    <p class="text-sm font-medium text-muted" style="margin-bottom: 0.25rem;">Net Earnings</p>
                                     <div class="text-black" style="font-size: 32px; font-weight: 700; display: flex; align-items: flex-end; gap: 8px;">
                                         ₹3,450
                                         <span class="badge-green" style="margin-bottom: 6px;"><i data-lucide="arrow-up-right" style="width:12px; height:12px;"></i> 12%</span>
@@ -298,7 +279,7 @@
                             <div class="app-body">
                                 <div class="app-card clickable" onclick="switchScreen('radar')">
                                     <div class="flex justify-between items-center" style="margin-bottom: 1rem;">
-                                        <h4 class="font-bold text-black text-sm" data-i18n="app-surge">Live Demand Surge</h4>
+                                        <h4 class="font-bold text-black text-sm">Live Demand Surge</h4>
                                         <div class="live-dot-wrap">
                                             <div class="live-dot">
                                                 <div class="live-dot-ping"></div>
@@ -314,7 +295,7 @@
                                             </div>
                                             <div>
                                                 <p class="font-bold text-sm text-black">Airport T2</p>
-                                                <p class="text-xs text-muted font-medium" data-i18n="app-extreme">Extreme volume</p>
+                                                <p class="text-xs text-muted font-medium">Extreme volume</p>
                                             </div>
                                         </div>
                                         <span class="badge-red">+ ₹180</span>
@@ -322,7 +303,7 @@
                                 </div>
 
                                 <div class="app-card clickable" onclick="switchScreen('route')">
-                                    <h4 class="font-bold text-black text-sm" style="margin-bottom: 1rem;" data-i18n="app-profit-route">Profitable Route</h4>
+                                    <h4 class="font-bold text-black text-sm" style="margin-bottom: 1rem;">Profitable Route</h4>
                                     <div class="relative" style="margin-left: 0.25rem;">
                                         <div class="absolute" style="left: 0.375rem; top: 0.75rem; bottom: 0.75rem; width: 2px; background: var(--border-color);"></div>
                                         <div class="flex items-center gap-4 relative z-10" style="margin-bottom: 1rem;">
@@ -341,8 +322,8 @@
                         <!-- Screen 2: Route -->
                         <div id="screen-route" class="app-screen text-left">
                             <div class="app-header">
-                                <p class="form-label" style="margin:0;" data-i18n="app-nav">Navigation</p>
-                                <p class="font-bold text-xl text-black" data-i18n="app-routing">Profit Routing</p>
+                                <p class="form-label" style="margin:0;">Navigation</p>
+                                <p class="font-bold text-xl text-black">Profit Routing</p>
                             </div>
                             
                             <div class="app-body">
@@ -377,7 +358,7 @@
                                     </div>
 
                                     <button onclick="simulateRoute()" class="btn-primary w-full" style="margin-bottom: 1.5rem;">
-                                        <span data-i18n="app-plan">Plan Trip</span>
+                                        <span>Plan Trip</span>
                                     </button>
 
                                     <div>
@@ -386,9 +367,9 @@
                                             <div class="app-card clickable flex justify-between items-center">
                                                 <div>
                                                     <p class="font-bold text-xs text-black">Airport Drop</p>
-                                                    <p class="text-xs text-muted" style="margin-top:2px;" data-i18n="app-avoid-traffic">Avoid traffic</p>
+                                                    <p class="text-xs text-muted" style="margin-top:2px;">Avoid traffic</p>
                                                 </div>
-                                                <span class="badge-green" data-i18n="app-save-45">Save ₹45</span>
+                                                <span class="badge-green">Save ₹45</span>
                                             </div>
                                         </div>
                                     </div>
@@ -396,13 +377,13 @@
 
                                 <div id="route-loading-state" class="app-card text-center hidden" style="padding: 4rem 1rem;">
                                     <i data-lucide="loader-2" style="width:32px; height:32px; margin: 0 auto 12px; color:var(--black); animation: spin 1s linear infinite;"></i>
-                                    <p class="font-semibold text-sm text-muted" data-i18n="app-analyzing">Analyzing live traffic & tolls...</p>
+                                    <p class="font-semibold text-sm text-muted">Analyzing live traffic & tolls...</p>
                                 </div>
 
                                 <div id="route-result-state" class="hidden">
                                     <div class="app-card">
                                         <div class="flex justify-between items-center" style="margin-bottom: 1rem;">
-                                            <h4 class="font-bold text-sm text-black" data-i18n="app-recommended">Recommended Route</h4>
+                                            <h4 class="font-bold text-sm text-black">Recommended Route</h4>
                                             <span id="result-saving" class="badge-green">Save ₹35</span>
                                         </div>
                                         
@@ -422,7 +403,7 @@
                                         </div>
 
                                         <div class="flex gap-2" style="border-top: 1px solid var(--border-color); padding-top: 1rem;">
-                                            <button class="btn-primary" style="flex-grow: 1; padding: 0.75rem;" data-i18n="app-start">Start Navigation</button>
+                                            <button class="btn-primary" style="flex-grow: 1; padding: 0.75rem;">Start Navigation</button>
                                             <button onclick="resetRoute()" class="btn-outline" style="padding: 0.75rem;"><i data-lucide="x" style="width:16px; height:16px;"></i></button>
                                         </div>
                                     </div>
@@ -435,8 +416,8 @@
                             <div class="app-header">
                                 <div class="flex justify-between items-end">
                                     <div>
-                                        <p class="form-label" style="margin:0;" data-i18n="app-live-map">Live Map</p>
-                                        <p class="font-bold text-xl text-black" data-i18n="app-demand-radar">Demand Radar</p>
+                                        <p class="form-label" style="margin:0;">Live Map</p>
+                                        <p class="font-bold text-xl text-black">Demand Radar</p>
                                     </div>
                                     <div class="live-dot-wrap">
                                         <div class="live-dot">
@@ -459,7 +440,7 @@
                                         </div>
                                         <div>
                                             <p class="font-bold text-sm text-black">Airport T2</p>
-                                            <p class="text-[10px] text-red font-bold" data-i18n="app-extreme">Extreme Demand</p>
+                                            <p class="text-[10px] text-red font-bold">Extreme Demand</p>
                                         </div>
                                     </div>
                                     <p class="badge-red">+ ₹180</p>
@@ -472,7 +453,7 @@
                                         </div>
                                         <div>
                                             <p class="font-bold text-sm text-black">BKC Blocks</p>
-                                            <p class="text-[10px] text-orange font-bold" data-i18n="app-high">High Demand</p>
+                                            <p class="text-[10px] text-orange font-bold">High Demand</p>
                                         </div>
                                     </div>
                                     <p class="badge-orange">+ ₹120</p>
@@ -483,25 +464,25 @@
                         <!-- Screen 4: Ledger -->
                         <div id="screen-ledger" class="app-screen text-left">
                             <div class="app-header">
-                                <p class="form-label" style="margin:0;" data-i18n="app-financials">Financials</p>
-                                <p class="font-bold text-xl text-black" data-i18n="app-hisaab">Digital Hisaab</p>
+                                <p class="form-label" style="margin:0;">Financials</p>
+                                <p class="font-bold text-xl text-black">Digital Hisaab</p>
                             </div>
                             
                             <div class="app-body">
                                 <div class="app-card">
-                                    <p class="form-label" data-i18n="app-total-rev">Total Revenue</p>
+                                    <p class="form-label">Total Revenue</p>
                                     <div class="flex justify-between items-end" style="margin-bottom: 1rem;">
                                         <p class="font-bold text-black" style="font-size: 2rem; line-height: 1;">₹4,250</p>
                                         <span class="badge-green" style="margin-bottom: 4px;"><i data-lucide="trending-up" style="width:12px; height:12px;"></i> +18%</span>
                                     </div>
                                     <div style="height: 1px; background: var(--border-color); margin-bottom: 0.75rem;"></div>
                                     <div class="flex justify-between items-center">
-                                        <span class="font-semibold text-xs text-muted" data-i18n="app-fuel">Fuel & Tolls</span>
+                                        <span class="font-semibold text-xs text-muted">Fuel & Tolls</span>
                                         <span class="badge-red">- ₹800</span>
                                     </div>
                                 </div>
 
-                                <h4 class="form-label" style="padding-left: 8px;" data-i18n="app-recent">Recent Logs</h4>
+                                <h4 class="form-label" style="padding-left: 8px;">Recent Logs</h4>
                                 
                                 <div class="app-card flex justify-between items-center">
                                     <div class="flex items-center gap-3">
@@ -557,8 +538,8 @@
     <section id="overview" class="section">
         <div class="container reveal">
             <div class="section-box text-center">
-                <h2 class="title-section" data-i18n="phil-title">The road belongs to you.<br>The data should too.</h2>
-                <p class="subtitle" style="margin-bottom: 0;" data-i18n="phil-sub">
+                <h2 class="title-section">The road belongs to you.<br>The data should too.</h2>
+                <p class="subtitle" style="margin-bottom: 0;">
                     Standard ride-hailing algorithms are built entirely for passengers. Safar X changes the rules. We provide the professional tools you need to track your true income, reduce fuel waste, and find the best rides. You own the car. You deserve the profit.
                 </p>
             </div>
@@ -569,14 +550,14 @@
     <section id="features" class="section" style="padding-top: 0;">
         <div class="container">
             <div class="text-center reveal" style="margin-bottom: 4rem;">
-                <h2 class="title-section" style="margin-bottom: 0;" data-i18n="feat-title">Everything you need.</h2>
+                <h2 class="title-section" style="margin-bottom: 0;">Everything you need.</h2>
             </div>
             
             <div class="bento-grid">
                 <div class="bento-card col-span-2 reveal">
                     <div>
-                        <h3 class="text-2xl font-bold text-black" style="margin-bottom: 0.5rem;" data-i18n="f1-title">Total earnings. Total clarity.</h3>
-                        <p class="text-muted" data-i18n="f1-sub">Track your daily, weekly, and lifetime revenue across all platforms. Deduct your fuel costs to see your actual net profit in seconds.</p>
+                        <h3 class="text-2xl font-bold text-black" style="margin-bottom: 0.5rem;">Total earnings. Total clarity.</h3>
+                        <p class="text-muted">Track your daily, weekly, and lifetime revenue across all platforms. Deduct your fuel costs to see your actual net profit in seconds.</p>
                     </div>
                     <div class="flex justify-end" style="margin-top: 2.5rem;">
                         <i data-lucide="pie-chart" style="width:80px; height:80px; color:var(--border-color); stroke-width:1;"></i>
@@ -584,8 +565,8 @@
                 </div>
                 <div class="bento-card reveal" style="transition-delay: 100ms;">
                     <div>
-                        <h3 class="text-2xl font-bold text-black" style="margin-bottom: 0.5rem;" data-i18n="f2-title">Routes built for profit.</h3>
-                        <p class="text-muted" data-i18n="f2-sub">Standard GPS finds the fastest route. We find the most cost-efficient route to save fuel.</p>
+                        <h3 class="text-2xl font-bold text-black" style="margin-bottom: 0.5rem;">Routes built for profit.</h3>
+                        <p class="text-muted">Standard GPS finds the fastest route. We find the most cost-efficient route to save fuel.</p>
                     </div>
                     <div style="margin-top: 2.5rem;">
                         <i data-lucide="map" style="width:64px; height:64px; color:var(--border-color); stroke-width:1;"></i>
@@ -593,8 +574,8 @@
                 </div>
                 <div class="bento-card reveal">
                     <div>
-                        <h3 class="text-2xl font-bold text-black" style="margin-bottom: 0.5rem;" data-i18n="f3-title">Live demand radar.</h3>
-                        <p class="text-muted" data-i18n="f3-sub">Stop guessing. See live heatmaps of high-demand zones across the city.</p>
+                        <h3 class="text-2xl font-bold text-black" style="margin-bottom: 0.5rem;">Live demand radar.</h3>
+                        <p class="text-muted">Stop guessing. See live heatmaps of high-demand zones across the city.</p>
                     </div>
                     <div style="margin-top: 2.5rem;">
                         <i data-lucide="radar" style="width:64px; height:64px; color:var(--border-color); stroke-width:1;"></i>
@@ -602,8 +583,8 @@
                 </div>
                 <div class="bento-card col-span-2 reveal" style="transition-delay: 100ms;">
                     <div>
-                        <h3 class="text-2xl font-bold text-black" style="margin-bottom: 0.5rem;" data-i18n="f4-title">Professional fleet logs.</h3>
-                        <p class="text-muted" data-i18n="f4-sub">Maintain digital duty slips, starting kilometer photos, and client signatures securely in one place.</p>
+                        <h3 class="text-2xl font-bold text-black" style="margin-bottom: 0.5rem;">Professional fleet logs.</h3>
+                        <p class="text-muted">Maintain digital duty slips, starting kilometer photos, and client signatures securely in one place.</p>
                     </div>
                     <div class="flex justify-end" style="margin-top: 2.5rem;">
                         <i data-lucide="file-text" style="width:80px; height:80px; color:var(--border-color); stroke-width:1;"></i>
@@ -617,33 +598,33 @@
     <section id="pricing" class="section" style="padding-top: 0;">
         <div class="container reveal">
             <div class="section-box text-center">
-                <h2 class="title-section" data-i18n="price-title">Pro tools. Zero cost.</h2>
-                <p class="subtitle" style="margin-bottom: 3rem;" data-i18n="price-sub">
+                <h2 class="title-section">Pro tools. Zero cost.</h2>
+                <p class="subtitle" style="margin-bottom: 3rem;">
                     Ride-hailing apps charge you commissions. We don't. Safar X is built to help you keep more of what you earn. 
                 </p>
                 
                 <div class="pricing-inner">
-                    <h3 class="price-amount text-black">₹0<span class="price-month" style="margin-left: 0.5rem;" data-i18n="price-month">/month</span></h3>
-                    <p class="font-semibold text-black text-lg" style="margin-bottom: 2.5rem;" data-i18n="price-free">Zero upfront costs during our exclusive beta phase.</p>
+                    <h3 class="price-amount text-black">₹0<span class="price-month" style="margin-left: 0.5rem;">/month</span></h3>
+                    <p class="font-semibold text-black text-lg" style="margin-bottom: 2.5rem;">Zero upfront costs during our exclusive beta phase.</p>
                     
                     <div style="width: 100%; height: 1px; background: var(--border-color); margin-bottom: 2.5rem;"></div>
                     
                     <div class="pricing-list">
                         <div class="pricing-item">
                             <div class="pricing-icon"><i data-lucide="banknote" style="width:20px; height:20px; color:var(--black);"></i></div>
-                            <span class="font-semibold text-black" data-i18n="p1">No commissions</span>
+                            <span class="font-semibold text-black">No commissions</span>
                         </div>
                         <div class="pricing-item">
                             <div class="pricing-icon"><i data-lucide="credit-card" style="width:20px; height:20px; color:var(--black);"></i></div>
-                            <span class="font-semibold text-black" data-i18n="p2">No subscription fees</span>
+                            <span class="font-semibold text-black">No subscription fees</span>
                         </div>
                         <div class="pricing-item">
                             <div class="pricing-icon"><i data-lucide="route" style="width:20px; height:20px; color:var(--black);"></i></div>
-                            <span class="font-semibold text-black" data-i18n="p3">Unlimited route planning</span>
+                            <span class="font-semibold text-black">Unlimited route planning</span>
                         </div>
                         <div class="pricing-item">
                             <div class="pricing-icon"><i data-lucide="hard-drive" style="width:20px; height:20px; color:var(--black);"></i></div>
-                            <span class="font-semibold text-black" data-i18n="p4">Free duty log storage</span>
+                            <span class="font-semibold text-black">Free duty log storage</span>
                         </div>
                     </div>
                 </div>
@@ -651,42 +632,39 @@
         </div>
     </section>
 
-    <!-- Web3Forms Beta Section -->
+    <!-- Simulated Beta Section -->
     <section id="beta" class="section" style="padding-top: 0;">
         <div class="container reveal">
             <div class="section-box">
                 <div class="text-center" style="margin-bottom: 3rem;">
-                    <h2 class="title-section" data-i18n="beta-title">Become a Beta Tester.</h2>
-                    <p class="subtitle" style="margin-bottom: 0;" data-i18n="beta-sub">
+                    <h2 class="title-section">Become a Beta Tester.</h2>
+                    <p class="subtitle" style="margin-bottom: 0;">
                         Help us shape the future of commercial driving. Get exclusive early access to the app before the public launch in Mumbai.
                     </p>
                 </div>
 
                 <div style="background: var(--surface); border: 1px solid var(--border-color); border-radius: 2rem; padding: 2.5rem; max-width: 800px; margin: 0 auto;">
-                    <form id="beta-form" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="4a5c1f1c-7500-4616-b06a-910ba1a3891a">
-                        <input type="hidden" name="subject" value="New Beta Tester Application - Safar X">
-                        <input type="hidden" name="from_name" value="Safar X Website">
-                        
+                    <!-- SIMULATED FORM -->
+                    <form id="beta-form">
                         <div class="form-grid">
                             <div>
-                                <label class="form-label" data-i18n="form-name">Full Name</label>
-                                <input type="text" name="name" required class="form-input" placeholder="Ramesh Kumar">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" required class="form-input" placeholder="Ramesh Kumar">
                             </div>
                             <div>
-                                <label class="form-label" data-i18n="form-mobile">Mobile Number / Email</label>
-                                <input type="text" name="contact" required class="form-input" placeholder="+91 98765 43210 / ramesh@email.com">
+                                <label class="form-label">Mobile Number / Email</label>
+                                <input type="text" required class="form-input" placeholder="+91 98765 43210 / ramesh@email.com">
                             </div>
                         </div>
 
                         <div class="form-grid">
                             <div>
-                                <label class="form-label" data-i18n="form-platform">Primary Platform</label>
+                                <label class="form-label">Primary Platform</label>
                                 <div class="form-select-wrap">
                                     <div class="form-select-icon" style="right: 1rem; left: auto;">
                                         <i data-lucide="chevron-down" style="width:16px; height:16px; color:var(--text-muted);"></i>
                                     </div>
-                                    <select name="platform" class="form-input form-input-select" style="padding-left: 1.25rem;">
+                                    <select class="form-input form-input-select" style="padding-left: 1.25rem;">
                                         <option value="Ola / Uber">Ola / Uber</option>
                                         <option value="Rapido">Rapido</option>
                                         <option value="InDrive">InDrive</option>
@@ -695,13 +673,13 @@
                                 </div>
                             </div>
                             <div>
-                                <label class="form-label" data-i18n="form-city">City</label>
-                                <input type="text" name="city" value="Mumbai" readonly class="form-input">
+                                <label class="form-label">City</label>
+                                <input type="text" value="Mumbai" readonly class="form-input">
                             </div>
                         </div>
 
                         <button type="submit" id="beta-submit-btn" class="btn-primary w-full" style="padding: 1rem; font-size: 1rem; margin-top: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
-                            <span data-i18n="form-submit">Submit Application</span>
+                            <span>Submit Application</span>
                         </button>
                     </form>
                     
@@ -709,8 +687,8 @@
                         <div style="background: var(--apple-green-light); border: 1px solid rgba(52,199,89,0.2); border-radius: 50%; padding: 0.75rem; margin-bottom: 1rem;">
                             <i data-lucide="check" style="width:32px; height:32px; color: var(--apple-green);"></i>
                         </div>
-                        <h4 class="font-bold text-xl text-black" style="margin-bottom: 0.5rem;" data-i18n="form-success">Application Received!</h4>
-                        <p class="text-muted font-medium" data-i18n="form-thanks">Thank you. We will contact you soon regarding the Beta rollout in Mumbai.</p>
+                        <h4 class="font-bold text-xl text-black" style="margin-bottom: 0.5rem;">Application Received!</h4>
+                        <p class="text-muted font-medium">Thank you. We will contact you soon regarding the Beta rollout in Mumbai.</p>
                     </div>
                 </div>
             </div>
@@ -721,54 +699,51 @@
     <section id="launch" class="section" style="padding-top: 0;">
         <div class="container reveal">
             <div class="section-box text-center">
-                <p class="form-label" style="margin-bottom: 1rem;" data-i18n="count-title">Public Launch Countdown</p>
-                <h2 class="title-section" style="margin-bottom: 3rem;" data-i18n="count-head">The wait is almost over.</h2>
+                <p class="form-label" style="margin-bottom: 1rem;">Public Launch Countdown</p>
+                <h2 class="title-section" style="margin-bottom: 3rem;">The wait is almost over.</h2>
                 
                 <div class="countdown-wrap" id="countdown">
                     <div class="countdown-box">
                         <span class="countdown-num" id="days">--</span>
-                        <p class="form-label" style="margin:0; text-transform:uppercase;" data-i18n="days">Days</p>
+                        <p class="form-label" style="margin:0; text-transform:uppercase;">Days</p>
                     </div>
                     <div class="countdown-sep">:</div>
                     <div class="countdown-box">
                         <span class="countdown-num" id="hours">--</span>
-                        <p class="form-label" style="margin:0; text-transform:uppercase;" data-i18n="hours">Hours</p>
+                        <p class="form-label" style="margin:0; text-transform:uppercase;">Hours</p>
                     </div>
                     <div class="countdown-sep">:</div>
                     <div class="countdown-box">
                         <span class="countdown-num" id="mins">--</span>
-                        <p class="form-label" style="margin:0; text-transform:uppercase;" data-i18n="mins">Mins</p>
+                        <p class="form-label" style="margin:0; text-transform:uppercase;">Mins</p>
                     </div>
                 </div>
                 
-                <form id="waitlist-form" action="https://api.web3forms.com/submit" method="POST" style="max-width: 450px; margin: 0 auto;">
-                    <input type="hidden" name="access_key" value="4a5c1f1c-7500-4616-b06a-910ba1a3891a">
-                    <input type="hidden" name="subject" value="New Waitlist Signup - Safar X">
-                    <input type="hidden" name="from_name" value="Safar X Website">
-                    
+                <!-- SIMULATED FORM -->
+                <form id="waitlist-form" style="max-width: 450px; margin: 0 auto;">
                     <div class="flex flex-col sm:flex-row gap-3" style="display:flex; flex-wrap:wrap; justify-content:center;">
                         <div class="relative" style="flex-grow: 1; min-width: 250px;">
                             <div class="absolute" style="left: 1rem; top: 50%; transform: translateY(-50%); pointer-events: none;">
                                 <span class="font-medium text-muted">+91</span>
                             </div>
-                            <input type="tel" name="phone" required placeholder="Mobile Number" class="form-input" style="padding-left: 3.5rem;">
+                            <input type="tel" required placeholder="Mobile Number" class="form-input" style="padding-left: 3.5rem;">
                         </div>
                         <button type="submit" id="waitlist-submit-btn" class="btn-primary" style="box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
-                            <span data-i18n="form-join">Join Waitlist</span>
+                            <span>Join Waitlist</span>
                         </button>
                     </div>
                 </form>
                 <div id="waitlist-success-message" class="hidden items-center justify-center gap-2" style="margin-top: 1.5rem;">
                     <i data-lucide="check" style="width:16px; height:16px; color:var(--apple-green);"></i>
-                    <span class="font-medium text-green text-sm" data-i18n="waitlist-success">You are on the list. We will notify you when the Mumbai beta opens.</span>
+                    <span class="font-medium text-green text-sm">You are on the list. We will notify you when the Mumbai beta opens.</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer (Stacked Layout) -->
+    <!-- Updated Footer -->
     <footer style="padding: 4rem 0 2rem; border-top: 1px solid var(--border-color); background: var(--bg-color);">
-        <div class="container flex flex-col items-center justify-center gap-6 text-center">
+        <div class="container flex flex-col items-center justify-center gap-4 text-center">
             
             <div class="nav-brand text-black" style="justify-content: center;">
                 <div style="width:32px; height:32px; background:var(--black); border-radius:8px; display:flex; align-items:center; justify-content:center;">
@@ -777,11 +752,9 @@
                 <span style="font-size: 1.5rem;">SafarX</span>
             </div>
             
-            <div class="flex items-center justify-center gap-6 font-medium text-sm text-muted" style="flex-wrap: wrap;">
-                <a href="privacy.html" class="footer-link" style="color: var(--text-muted); transition: color 0.2s;" onmouseover="this.style.color='var(--black)'" onmouseout="this.style.color='var(--text-muted)'">Privacy</a>
-                <a href="terms.html" class="footer-link" style="color: var(--text-muted); transition: color 0.2s;" onmouseover="this.style.color='var(--black)'" onmouseout="this.style.color='var(--text-muted)'">Terms</a>
-                <a href="contact.html" class="footer-link" style="color: var(--text-muted); transition: color 0.2s;" onmouseover="this.style.color='var(--black)'" onmouseout="this.style.color='var(--text-muted)'">Contact</a>
-            </div>
+            <p class="text-muted text-sm font-medium">
+                The Professional Driver's App.
+            </p>
             
             <div class="text-xs text-muted mt-2">
                 &copy; 2026 Safar X Technologies. Built for the professionals.
@@ -793,110 +766,6 @@
     <!-- Interactive Scripts -->
     <script>
         lucide.createIcons();
-
-        // ------------------------------
-        // TRANSLATION LOGIC (EN, HI, MR)
-        // ------------------------------
-        const translations = {
-            en: {
-                "nav-overview": "Overview", "nav-features": "Features", "nav-pricing": "Pricing", "nav-beta": "Beta Access", "nav-join": "Join Us",
-                "hero-badge": "100% Free App for Drivers", "hero-greeting": "Hello, Mumbai.",
-                "hero-title": "Take Control <br> of Your <span class='text-accent relative inline-block' style='display:inline-block; position:relative;'>Kamai.<svg class='absolute w-full h-3' style='position:absolute; bottom:-4px; left:0; width:100%; height:12px; color:rgba(30,64,175,0.2);' viewBox='0 0 100 20' preserveAspectRatio='none'><path d='M0 10 Q 50 20 100 10' fill='none' stroke='currentColor' stroke-width='8' stroke-linecap='round'/></svg></span>",
-                "hero-subtitle": "Whether you drive for Ola, Uber, Rapido, or an MNC fleet, Safar X is your personal assistant. Track total revenue, find the most profitable routes, and get real-time surge updates.",
-                "btn-beta": "Get Beta Access", "btn-learn": "Learn more",
-                "phil-title": "The road belongs to you.<br>The data should too.",
-                "phil-sub": "Standard ride-hailing algorithms are built entirely for passengers. Safar X changes the rules. We provide the professional tools you need to track your true income, reduce fuel waste, and find the best rides. You own the car. You deserve the profit.",
-                "feat-title": "Everything you need.",
-                "f1-title": "Total earnings. Total clarity.", "f1-sub": "Track your daily, weekly, and lifetime revenue across all platforms. Deduct your fuel costs to see your actual net profit in seconds.",
-                "f2-title": "Routes built for profit.", "f2-sub": "Standard GPS finds the fastest route. We find the most cost-efficient route to save fuel.",
-                "f3-title": "Live demand radar.", "f3-sub": "Stop guessing. See live heatmaps of high-demand zones across the city.",
-                "f4-title": "Professional fleet logs.", "f4-sub": "Maintain digital duty slips, starting kilometer photos, and client signatures securely in one place.",
-                "price-title": "Pro tools. Zero cost.", "price-sub": "Ride-hailing apps charge you commissions. We don't. Safar X is built to help you keep more of what you earn.",
-                "price-month": "/month", "price-free": "Zero upfront costs during our exclusive beta phase.",
-                "p1": "No commissions", "p2": "No subscription fees", "p3": "Unlimited route planning", "p4": "Free duty log storage",
-                "beta-title": "Become a Beta Tester.", "beta-sub": "Help us shape the future of commercial driving. Get exclusive early access to the app before the public launch in Mumbai.",
-                "form-name": "Full Name", "form-mobile": "Mobile Number / Email", "form-platform": "Primary Platform", "form-city": "City", "form-submit": "Submit Application",
-                "form-success": "Application Received!", "form-thanks": "Thank you. We will contact you soon regarding the Beta rollout in Mumbai.",
-                "count-title": "Public Launch Countdown", "count-head": "The wait is almost over.",
-                "days": "Days", "hours": "Hours", "mins": "Mins", "form-join": "Join Waitlist", "waitlist-success": "You are on the list. We will notify you when the Mumbai beta opens.",
-                "app-today": "Today's Overview", "app-earnings": "Net Earnings", "app-surge": "Live Demand Surge", "app-extreme": "Extreme volume", "app-high": "High Demand",
-                "app-profit-route": "Profitable Route", "app-nav": "Navigation", "app-routing": "Profit Routing", "app-plan": "Plan Trip", "app-avoid-traffic": "Avoid Traffic",
-                "app-save-45": "Save ₹45", "app-analyzing": "Analyzing live traffic...", "app-recommended": "Recommended Route", "app-start": "Start Navigation",
-                "app-live-map": "Live Map", "app-demand-radar": "Demand Radar", "app-financials": "Financials", "app-hisaab": "Digital Hisaab", "app-total-rev": "Total Revenue",
-                "app-fuel": "Fuel & Tolls", "app-recent": "Recent Logs"
-            },
-            hi: {
-                "nav-overview": "अवलोकन", "nav-features": "विशेषताएं", "nav-pricing": "कीमत", "nav-beta": "बीटा एक्सेस", "nav-join": "हमसे जुड़ें",
-                "hero-badge": "ड्राइवरों के लिए 100% मुफ्त ऐप", "hero-greeting": "नमस्ते, मुंबई।",
-                "hero-title": "अपनी <span class='text-accent relative inline-block' style='display:inline-block; position:relative;'>कमाई<svg class='absolute w-full h-3' style='position:absolute; bottom:-4px; left:0; width:100%; height:12px; color:rgba(30,64,175,0.2);' viewBox='0 0 100 20' preserveAspectRatio='none'><path d='M0 10 Q 50 20 100 10' fill='none' stroke='currentColor' stroke-width='8' stroke-linecap='round'/></svg></span> पर <br>नियंत्रण रखें।",
-                "hero-subtitle": "चाहे आप ओला, उबर, रैपिडो के लिए गाड़ी चलाते हों, या किसी कंपनी के लिए, Safar X आपका निजी सहायक है। राजस्व ट्रैक करें, सबसे लाभदायक मार्ग खोजें, और रीयल-टाइम सर्ज अपडेट प्राप्त करें।",
-                "btn-beta": "बीटा एक्सेस प्राप्त करें", "btn-learn": "और जानें",
-                "phil-title": "सड़क आपकी है।<br>डेटा भी आपका होना चाहिए।",
-                "phil-sub": "स्टैंडर्ड राइड-हेलिंग एल्गोरिदम पूरी तरह से यात्रियों के लिए बनाए गए हैं। Safar X नियम बदलता है। हम आपको अपनी वास्तविक आय को ट्रैक करने और ईंधन बचाने के लिए पेशेवर उपकरण प्रदान करते हैं।",
-                "feat-title": "आपकी जरूरत की हर चीज।",
-                "f1-title": "कुल कमाई। पूर्ण स्पष्टता।", "f1-sub": "सभी प्लेटफार्मों पर अपने दैनिक और साप्ताहिक राजस्व को ट्रैक करें। सेकंड में अपना वास्तविक शुद्ध लाभ देखने के लिए ईंधन लागत घटाएं।",
-                "f2-title": "मुनाफे के लिए बनाए गए मार्ग।", "f2-sub": "मानक जीपीएस सबसे तेज़ मार्ग खोजता है। हम ईंधन बचाने के लिए सबसे अधिक लागत-कुशल मार्ग खोजते हैं।",
-                "f3-title": "लाइव डिमांड रडार।", "f3-sub": "अनुमान लगाना बंद करें। शहर भर में उच्च-मांग वाले क्षेत्रों के लाइव हीटमैप देखें।",
-                "f4-title": "प्रोफेशनल फ्लीट लॉग।", "f4-sub": "अपनी डिजिटल ड्यूटी स्लिप, किलोमीटर फोटो और क्लाइंट हस्ताक्षर सुरक्षित रूप से एक ही स्थान पर बनाए रखें।",
-                "price-title": "प्रो टूल्स। शून्य लागत।", "price-sub": "राइड-हेलिंग ऐप्स आपसे कमीशन लेते हैं। हम नहीं लेते। Safar X आपको अपनी कमाई का अधिक हिस्सा रखने में मदद करने के लिए बनाया गया है।",
-                "price-month": "/महीना", "price-free": "हमारे विशेष बीटा चरण के दौरान कोई अग्रिम लागत नहीं।",
-                "p1": "कोई कमीशन नहीं", "p2": "कोई सदस्यता शुल्क नहीं", "p3": "असीमित मार्ग योजना", "p4": "मुफ्त ड्यूटी लॉग स्टोरेज",
-                "beta-title": "बीटा टेस्टर बनें।", "beta-sub": "व्यावसायिक ड्राइविंग के भविष्य को आकार देने में हमारी मदद करें। मुंबई में सार्वजनिक लॉन्च से पहले ऐप का विशेष प्रारंभिक उपयोग प्राप्त करें।",
-                "form-name": "पूरा नाम", "form-mobile": "मोबाइल नंबर / ईमेल", "form-platform": "प्राथमिक प्लेटफार्म", "form-city": "शहर", "form-submit": "आवेदन जमा करें",
-                "form-success": "आवेदन प्राप्त हुआ!", "form-thanks": "धन्यवाद। हम मुंबई में बीटा रोलआउट के संबंध में जल्द ही आपसे संपर्क करेंगे।",
-                "count-title": "सार्वजनिक लॉन्च उलटी गिनती", "count-head": "इंतजार लगभग खत्म हो गया है।",
-                "days": "दिन", "hours": "घंटे", "mins": "मिनिट", "form-join": "प्रतीक्षा सूची में शामिल हों", "waitlist-success": "आप सूची में हैं। मुंबई बीटा खुलने पर हम आपको सूचित करेंगे।",
-                "app-today": "आज का अवलोकन", "app-earnings": "शुद्ध कमाई", "app-surge": "लाइव डिमांड सर्ज", "app-extreme": "अत्यधिक मांग", "app-high": "उच्च मांग",
-                "app-profit-route": "लाभदायक मार्ग", "app-nav": "नेविगेशन", "app-routing": "प्रॉफिट राउटिंग", "app-plan": "यात्रा की योजना बनाएं", "app-avoid-traffic": "ट्रैफिक से बचें",
-                "app-save-45": "₹45 बचाएं", "app-analyzing": "लाइव ट्रैफिक का विश्लेषण...", "app-recommended": "अनुशंसित मार्ग", "app-start": "नेविगेशन शुरू करें",
-                "app-live-map": "लाइव मैप", "app-demand-radar": "डिमांड रडार", "app-financials": "वित्तीय", "app-hisaab": "डिजिटल हिसाब", "app-total-rev": "कुल राजस्व",
-                "app-fuel": "ईंधन और टोल", "app-recent": "हाल के लॉग"
-            },
-            mr: {
-                "nav-overview": "आढावा", "nav-features": "वैशिष्ट्ये", "nav-pricing": "किंमत", "nav-beta": "बीटा ऍक्सेस", "nav-join": "सामील व्हा",
-                "hero-badge": "ड्रायव्हर्ससाठी 100% मोफत ॲप", "hero-greeting": "नमस्कार, मुंबई.",
-                "hero-title": "तुमच्या <span class='text-accent relative inline-block' style='display:inline-block; position:relative;'>कमाईवर<svg class='absolute w-full h-3' style='position:absolute; bottom:-4px; left:0; width:100%; height:12px; color:rgba(30,64,175,0.2);' viewBox='0 0 100 20' preserveAspectRatio='none'><path d='M0 10 Q 50 20 100 10' fill='none' stroke='currentColor' stroke-width='8' stroke-linecap='round'/></svg></span> <br>नियंत्रण ठेवा.",
-                "hero-subtitle": "तुम्ही ओला, उबर, रॅपिडोसाठी गाडी चालवत असाल किंवा कंपनीच्या ताफ्यासाठी, Safar X तुमचा वैयक्तिक सहाय्यक आहे. एकूण महसूल ट्रॅक करा आणि रिअल-टाइम सर्ज अपडेट मिळवा.",
-                "btn-beta": "बीटा ऍक्सेस मिळवा", "btn-learn": "अधिक जाणून घ्या",
-                "phil-title": "रस्ता तुमचा आहे.<br>डेटाही तुमचाच असावा.",
-                "phil-sub": "स्टँडर्ड राइड-हेलिंग अल्गोरिदम प्रवाशांसाठी बनवले आहेत. Safar X नियम बदलते. तुमचे खरे उत्पन्न ट्रॅक करण्यासाठी आणि इंधन वाचवण्यासाठी आम्ही तुम्हाला व्यावसायिक साधने पुरवतो.",
-                "feat-title": "तुम्हाला आवश्यक असलेले सर्व काही.",
-                "f1-title": "एकूण कमाई. पूर्ण स्पष्टता.", "f1-sub": "सर्व प्लॅटफॉर्मवर तुमचा दररोजचा आणि साप्ताहिक महसूल ट्रॅक करा. तुमचा खरा निव्वळ नफा पाहण्यासाठी इंधनाचा खर्च वजा करा.",
-                "f2-title": "नफ्यासाठी बनवलेले मार्ग.", "f2-sub": "मानक जीपीएस सर्वात वेगवान मार्ग शोधते. आम्ही इंधन वाचवण्यासाठी सर्वात किफायतशीर मार्ग शोधतो.",
-                "f3-title": "लाइव्ह डिमांड रडार.", "f3-sub": "अंदाज लावणे थांबवा. शहरभरात जास्त मागणी असलेल्या भागांचे लाइव्ह हीटमॅप्स पहा.",
-                "f4-title": "प्रोफेशनल फ्लीट लॉग.", "f4-sub": "तुमच्या डिजिटल ड्युटी स्लिप्स, किलोमीटर फोटो आणि क्लायंटच्या स्वाक्षऱ्या एकाच जागी सुरक्षित ठेवा.",
-                "price-title": "प्रो टूल्स. शून्य खर्च.", "price-sub": "राइड-हेलिंग ॲप्स तुमच्याकडून कमिशन घेतात. आम्ही घेत नाही. Safar X तुम्हाला तुमची जास्तीत जास्त कमाई स्वतःकडे ठेवण्यास मदत करण्यासाठी बनवले आहे.",
-                "price-month": "/महिना", "price-free": "आमच्या विशेष बीटा टप्प्यात कोणताही आगाऊ खर्च नाही.",
-                "p1": "कोणतेही कमिशन नाही", "p2": "कोणतेही सबस्क्रिप्शन शुल्क नाही", "p3": "अमर्यादित मार्ग नियोजन", "p4": "मोफत ड्युटी लॉग स्टोरेज",
-                "beta-title": "बीटा टेस्टर व्हा.", "beta-sub": "व्यावसायिक ड्रायव्हिंगचे भविष्य घडवण्यात आम्हाला मदत करा. मुंबईत पब्लिक लॉन्च होण्यापूर्वी ॲपचा विशेष प्रारंभिक ऍक्सेस मिळवा.",
-                "form-name": "पूर्ण नाव", "form-mobile": "मोबाईल नंबर / ईमेल", "form-platform": "प्राथमिक प्लॅटफॉर्म", "form-city": "शहर", "form-submit": "अर्ज सबमिट करा",
-                "form-success": "अर्ज प्राप्त झाला!", "form-thanks": "धन्यवाद. मुंबईतील बीटा रोलआउट संदर्भात आम्ही लवकरच तुमच्याशी संपर्क साधू.",
-                "count-title": "पब्लिक लॉन्च काउंटडाउन", "count-head": "प्रतीक्षा जवळजवळ संपली आहे.",
-                "days": "दिवस", "hours": "तास", "mins": "मिनिटे", "form-join": "प्रतीक्षा यादीत सामील व्हा", "waitlist-success": "तुम्ही यादीत आहात. मुंबई बीटा उघडल्यावर आम्ही तुम्हाला सूचित करू.",
-                "app-today": "आजचा आढावा", "app-earnings": "निव्वळ कमाई", "app-surge": "लाइव्ह डिमांड सर्ज", "app-extreme": "अत्यंत मागणी", "app-high": "जास्त मागणी",
-                "app-profit-route": "फायदेशीर मार्ग", "app-nav": "नेव्हिगेशन", "app-routing": "प्रॉफिट राउटिंग", "app-plan": "प्रवासाचे नियोजन करा", "app-avoid-traffic": "ट्रॅफिक टाळा",
-                "app-save-45": "₹45 वाचवा", "app-analyzing": "लाइव्ह ट्रॅफिकचे विश्लेषण...", "app-recommended": "शिफारस केलेला मार्ग", "app-start": "नेव्हिगेशन सुरू करा",
-                "app-live-map": "लाइव्ह मॅप", "app-demand-radar": "डिमांड रडार", "app-financials": "वित्तीय", "app-hisaab": "डिजिटल हिसाब", "app-total-rev": "एकूण महसूल",
-                "app-fuel": "इंधन आणि टोल", "app-recent": "अलीकडील नोंदी"
-            }
-        };
-
-        function changeLanguage(lang) {
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if(translations[lang] && translations[lang][key]) {
-                    el.innerHTML = translations[lang][key];
-                }
-            });
-            lucide.createIcons(); // Re-render any icons inside dynamically changed buttons
-        }
-
-        const langSwitch = document.getElementById('lang-switch');
-        if (langSwitch) {
-             langSwitch.addEventListener('change', (e) => {
-                changeLanguage(e.target.value);
-            });
-        }
 
         // ------------------------------
         // MAP LOGIC (LEAFLET)
@@ -1070,76 +939,37 @@
         startCountdown();
 
         // ------------------------------
-        // WEB3FORMS AJAX HANDLER
+        // SIMULATED FORM HANDLER
         // ------------------------------
-        async function handleWeb3Form(e, formId, btnId, successId) {
+        function simulateFormSubmit(e, formId, btnId, successId) {
             e.preventDefault();
             const form = e.target;
             const btn = document.getElementById(btnId);
             
+            // Show loading icon
             btn.innerHTML = '<i data-lucide="loader-2" style="width:20px; height:20px; animation: spin 1s linear infinite; margin: 0 auto;"></i>';
             lucide.createIcons();
             btn.disabled = true;
 
-            try {
-                const formData = new FormData(form);
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-                
-                if (response.ok) {
-                    form.style.display = 'none';
-                    const successEl = document.getElementById(successId);
-                    successEl.classList.remove('hidden');
-                    successEl.classList.add('flex');
-                } else {
-                    btn.innerHTML = 'Error. Try Again.';
-                    btn.disabled = false;
-                }
-            } catch (error) {
-                btn.innerHTML = 'Error. Try Again.';
-                btn.disabled = false;
-            }
+            // Simulate network delay
+            setTimeout(() => {
+                form.style.display = 'none';
+                const successEl = document.getElementById(successId);
+                successEl.classList.remove('hidden');
+                successEl.classList.add('flex');
+            }, 1200);
         }
 
         const betaForm = document.getElementById('beta-form');
         if(betaForm) {
-            betaForm.addEventListener('submit', (e) => handleWeb3Form(e, 'beta-form', 'beta-submit-btn', 'beta-success-message'));
+            betaForm.addEventListener('submit', (e) => simulateFormSubmit(e, 'beta-form', 'beta-submit-btn', 'beta-success-message'));
         }
 
         const waitlistForm = document.getElementById('waitlist-form');
         if(waitlistForm) {
-            waitlistForm.addEventListener('submit', (e) => handleWeb3Form(e, 'waitlist-form', 'waitlist-submit-btn', 'waitlist-success-message'));
+            waitlistForm.addEventListener('submit', (e) => simulateFormSubmit(e, 'waitlist-form', 'waitlist-submit-btn', 'waitlist-success-message'));
         }
 
     </script>
-<!-- SiteHQ Form Capture — paste before </body> on every page -->
-<script>
-(function(){
-  var SHQ = { id: '7fwpnp9', name: 'Safar x' };
-  function parseForm(form) {
-    var d = {}; new FormData(form).forEach(function(v,k){ d[k]=v; }); return d;
-  }
-  function pickField(d, keys) {
-    for(var i=0;i<keys.length;i++) { var k=keys[i]; for(var f in d) { if(f.toLowerCase().includes(k) && d[f]) return d[f]; } } return '';
-  }
-  document.addEventListener('submit', function(e) {
-    var fd = parseForm(e.target);
-    var lead = {
-      siteId: SHQ.id, siteName: SHQ.name,
-      name:  pickField(fd,['name','full','fname','first']) || 'Unknown',
-      email: pickField(fd,['email','mail','e-mail']),
-      phone: pickField(fd,['phone','mobile','tel','number']),
-      message: pickField(fd,['message','msg','note','enquiry','query','comment']),
-      formData: fd, url: location.href,
-      ts: new Date().toISOString()
-    };
-    try { new BroadcastChannel('sitehq_leads').postMessage(lead); } catch(err){}
-    try { if(window.opener) window.opener.postMessage({type:'sitehq_lead',lead:lead},'*'); } catch(err){}
-  }, true);
-})();
-</script>
 </body>
 </html>
