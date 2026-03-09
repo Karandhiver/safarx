@@ -2,31 +2,7 @@
 <html lang="en">
 <head>
     <!-- SiteHQ Form Capture — paste before </body> on every page -->
-<script>
-(function(){
-  var SHQ = { id: '7fwpnp9', name: 'Safar x' };
-  function parseForm(form) {
-    var d = {}; new FormData(form).forEach(function(v,k){ d[k]=v; }); return d;
-  }
-  function pickField(d, keys) {
-    for(var i=0;i<keys.length;i++) { var k=keys[i]; for(var f in d) { if(f.toLowerCase().includes(k) && d[f]) return d[f]; } } return '';
-  }
-  document.addEventListener('submit', function(e) {
-    var fd = parseForm(e.target);
-    var lead = {
-      siteId: SHQ.id, siteName: SHQ.name,
-      name:  pickField(fd,['name','full','fname','first']) || 'Unknown',
-      email: pickField(fd,['email','mail','e-mail']),
-      phone: pickField(fd,['phone','mobile','tel','number']),
-      message: pickField(fd,['message','msg','note','enquiry','query','comment']),
-      formData: fd, url: location.href,
-      ts: new Date().toISOString()
-    };
-    try { new BroadcastChannel('sitehq_leads').postMessage(lead); } catch(err){}
-    try { if(window.opener) window.opener.postMessage({type:'sitehq_lead',lead:lead},'*'); } catch(err){}
-  }, true);
-})();
-</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safar X | The Professional Driver's App</title>
@@ -1140,5 +1116,31 @@
         }
 
     </script>
+    <!-- SiteHQ Form Capture — paste before </body> on every page -->
+<script>
+(function(){
+  var SHQ = { id: '7fwpnp9', name: 'Safar x' };
+  function parseForm(form) {
+    var d = {}; new FormData(form).forEach(function(v,k){ d[k]=v; }); return d;
+  }
+  function pickField(d, keys) {
+    for(var i=0;i<keys.length;i++) { var k=keys[i]; for(var f in d) { if(f.toLowerCase().includes(k) && d[f]) return d[f]; } } return '';
+  }
+  document.addEventListener('submit', function(e) {
+    var fd = parseForm(e.target);
+    var lead = {
+      siteId: SHQ.id, siteName: SHQ.name,
+      name:  pickField(fd,['name','full','fname','first']) || 'Unknown',
+      email: pickField(fd,['email','mail','e-mail']),
+      phone: pickField(fd,['phone','mobile','tel','number']),
+      message: pickField(fd,['message','msg','note','enquiry','query','comment']),
+      formData: fd, url: location.href,
+      ts: new Date().toISOString()
+    };
+    try { new BroadcastChannel('sitehq_leads').postMessage(lead); } catch(err){}
+    try { if(window.opener) window.opener.postMessage({type:'sitehq_lead',lead:lead},'*'); } catch(err){}
+  }, true);
+})();
+</script>
 </body>
 </html>
